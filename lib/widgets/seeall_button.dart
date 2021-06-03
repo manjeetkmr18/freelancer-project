@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SeeALlButton extends StatelessWidget {
   @override
@@ -20,7 +19,7 @@ class SeeALlButton extends StatelessWidget {
       ),
       label: Text(
         'SEE ALL',
-        style: GoogleFonts.inter().copyWith(fontSize: 9),
+        style: TextStyle(fontSize: 9),
       ),
     );
   }

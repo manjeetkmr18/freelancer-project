@@ -14,7 +14,7 @@ class Oscar1970 extends StatelessWidget {
           margin: EdgeInsets.symmetric(vertical: 10.0),
           height: 280.0,
           child: ListView.builder(
-            itemCount: 2,
+            itemCount: 10,
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
               return CardBox(

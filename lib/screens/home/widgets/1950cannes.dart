@@ -17,7 +17,7 @@ class Canness1950 extends StatelessWidget {
         Container(
           height: 190.0,
           child: ListView.builder(
-            itemCount: 4,
+            itemCount: 10,
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
               return CardBox(

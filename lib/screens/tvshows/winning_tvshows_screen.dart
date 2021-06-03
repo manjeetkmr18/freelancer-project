@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'widgets/show_widget.dart';
 
@@ -21,8 +20,8 @@ class WinningTvShows extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(60),
-                      topRight: Radius.circular(60),
+                      topLeft: Radius.circular(40),
+                      topRight: Radius.circular(40),
                     ),
                   ),
                   child: SingleChildScrollView(
@@ -55,7 +54,7 @@ class WinningTvShows extends StatelessWidget {
                                 children: [
                                   Text(
                                     '1950 Black & White Award-\nWinning TV-Shows',
-                                    style: GoogleFonts.inter().copyWith(
+                                    style: TextStyle(
                                       fontSize: 19.13,
                                     ),
                                   ),
@@ -84,51 +83,6 @@ class WinningTvShows extends StatelessWidget {
                             ],
                           ),
                         ),
-                        // Padding(
-                        //   padding: const EdgeInsets.only(top: 15.0),
-                        //   child: Column(
-                        //     children: [
-                        //       Row(
-                        //         mainAxisAlignment:
-                        //             MainAxisAlignment.spaceBetween,
-                        //         children: [
-                        //           Expanded(child: TvShowWidget()),
-                        //           SizedBox(width: 2),
-                        //           Expanded(child: TvShowWidget())
-                        //         ],
-                        //       ),
-                        //       SizedBox(
-                        //         height: 10,
-                        //       ),
-                        //       Row(
-                        //         mainAxisAlignment:
-                        //             MainAxisAlignment.spaceBetween,
-                        //         children: [
-                        //           Expanded(child: TvShowWidget()),
-                        //           SizedBox(width: 2),
-                        //           Expanded(
-                        //             child: TvShowWidget(),
-                        //           ),
-                        //         ],
-                        //       ),
-                        //       SizedBox(
-                        //         height: 10,
-                        //       ),
-                        //       Row(
-                        //         mainAxisAlignment:
-                        //             MainAxisAlignment.spaceBetween,
-                        //         children: [
-                        //           Expanded(child: TvShowWidget()),
-                        //           SizedBox(width: 2),
-                        //           Expanded(
-                        //             child: TvShowWidget(),
-                        //           ),
-                        //         ],
-                        //       )
-                        //     ],
-                        //   ),
-                        // ),
-
                         Container(
                           padding: EdgeInsets.only(
                             left: 25.0,

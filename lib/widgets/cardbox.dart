@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class CardBox extends StatelessWidget {
   final double height, width, imageheight, imagewidth;
@@ -35,8 +34,8 @@ class CardBox extends StatelessWidget {
               fit: BoxFit.contain,
             ),
           ),
-          Text(text1, style: GoogleFonts.inter().copyWith(fontSize: 11.94)),
-          Text(text2, style: GoogleFonts.inter().copyWith(fontSize: 11.94))
+          Text(text1, style: TextStyle(fontSize: 11.94)),
+          Text(text2, style: TextStyle(fontSize: 11.94))
         ],
       ),
     );

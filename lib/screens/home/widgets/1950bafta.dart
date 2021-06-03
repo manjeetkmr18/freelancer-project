@@ -8,13 +8,13 @@ class Bafta1950 extends StatelessWidget {
     return Column(
       children: [
         TitleWidget(
-          titletext: '1950 BAFTA Award-Winning \nMovies',
+          titletext: '1950 BAFTA Award-Winning\nMovies',
         ),
         Container(
           margin: EdgeInsets.symmetric(vertical: 10.0),
           height: 230.0,
           child: ListView.builder(
-            itemCount: 3,
+            itemCount: 10,
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
               return CardBox(

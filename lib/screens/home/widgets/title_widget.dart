@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:freelancer_project/widgets/seeall_button.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class TitleWidget extends StatelessWidget {
   final String titletext;
@@ -13,7 +12,7 @@ class TitleWidget extends StatelessWidget {
       children: [
         Text(
           titletext,
-          style: GoogleFonts.inter().copyWith(
+          style: TextStyle(
             fontSize: 19.13,
             color: Colors.black,
           ),

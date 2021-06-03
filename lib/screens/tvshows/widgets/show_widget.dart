@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class TvShowWidget extends StatelessWidget {
   @override
@@ -46,7 +45,7 @@ class TvShowWidget extends StatelessWidget {
                   padding: const EdgeInsets.only(bottom: 8.0),
                   child: Text(
                     'Schindler’s List (1993)',
-                    style: GoogleFonts.inter().copyWith(
+                    style: TextStyle(
                       fontSize: 11.94,
                     ),
                   ),
@@ -55,7 +54,7 @@ class TvShowWidget extends StatelessWidget {
                   padding: const EdgeInsets.only(bottom: 8.0),
                   child: Text(
                     'The true story of how businessman Oskar Schindler saved over a thousand Jewish lives from the Nazis while they worked as slaves in his factory during World War II.',
-                    style: GoogleFonts.inter().copyWith(
+                    style: TextStyle(
                       fontSize: 10.61,
                     ),
                   ),
@@ -79,7 +78,7 @@ class TvShowWidget extends StatelessWidget {
                                     color: Colors.white, size: 9),
                                 Text(
                                   'Won 15 Awards',
-                                  style: GoogleFonts.inter().copyWith(
+                                  style: TextStyle(
                                     fontSize: 7,
                                     color: Colors.white,
                                   ),
@@ -106,7 +105,7 @@ class TvShowWidget extends StatelessWidget {
                                       color: Colors.white, size: 9),
                                   Text(
                                     'Won 15 Awards',
-                                    style: GoogleFonts.inter().copyWith(
+                                    style: TextStyle(
                                         fontSize: 7, color: Colors.white),
                                   )
                                 ],
@@ -118,7 +117,7 @@ class TvShowWidget extends StatelessWidget {
                 ),
                 Text(
                   'Where to Watch',
-                  style: GoogleFonts.inter().copyWith(fontSize: 11.94),
+                  style: TextStyle(fontSize: 11.94),
                 ),
                 Container(
                   height: 50,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:freelancer_project/screens/film_festival/film_festival.dart';
 import 'package:freelancer_project/screens/home/home_screen.dart';
+import 'package:freelancer_project/screens/tvshows/winning_tvshows_screen.dart';
 
 class BottomNavHome extends StatefulWidget {
   @override
@@ -16,8 +18,8 @@ class _BottomNavHomeState extends State<BottomNavHome> {
   List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
+    WinningTvShows(),
+    FilmFestival(),
     HomeScreen()
   ];
 
@@ -65,21 +67,24 @@ class _BottomNavHomeState extends State<BottomNavHome> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: _buildIcon(Icons.remove_red_eye_outlined, 'Discover', 0),
-            title: Text('Discover'),
+            label: 'Discover',
           ),
           BottomNavigationBarItem(
             icon: _buildIcon(Icons.star_border, 'Awards', 1),
-            title: Text('Awards'),
+            label: 'Awards',
           ),
           BottomNavigationBarItem(
-              icon: _buildIcon(Icons.search, 'Search', 2),
-              title: Text('Search')),
+            icon: _buildIcon(Icons.search, 'Search', 2),
+            label: 'Search',
+          ),
           BottomNavigationBarItem(
-              icon: _buildIcon(Icons.menu_book_rounded, 'Blog', 3),
-              title: Text('Blog')),
+            icon: _buildIcon(Icons.menu_book_rounded, 'Blog', 3),
+            label: 'Blog',
+          ),
           BottomNavigationBarItem(
-              icon: _buildIcon(Icons.account_circle_sharp, 'Account', 4),
-              title: Text('Account')),
+            icon: _buildIcon(Icons.account_circle_sharp, 'Account', 4),
+            label: 'Account',
+          ),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: _selectedItemColor,

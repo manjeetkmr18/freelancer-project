@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:freelancer_project/models/blog_model.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class BlogSection extends StatefulWidget {
   @override
@@ -74,27 +73,37 @@ class _BlogSectionState extends State<BlogSection> {
                 fit: BoxFit.contain,
                 width: double.infinity,
               ),
-              Text(
-                bloglist[index].title,
-                style: GoogleFonts.inter().copyWith(
-                  fontSize: 11.94,
-                  color: Colors.black,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  bloglist[index].title,
+                  style: TextStyle(
+                    fontSize: 11.94,
+                    color: Colors.black,
+                  ),
                 ),
               ),
-              Text(
-                '${bloglist[index].date}·${bloglist[index].readTime}',
-                textAlign: TextAlign.start,
-                style: GoogleFonts.inter().copyWith(
-                  fontSize: 10.61,
-                  color: Colors.black,
-                  wordSpacing: 2,
+              Padding(
+                padding: const EdgeInsets.all(2.0),
+                child: Text(
+                  '${bloglist[index].date}·${bloglist[index].readTime}',
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                    fontSize: 10.61,
+                    color: Colors.black,
+                    wordSpacing: 2,
+                  ),
                 ),
               ),
-              Text(
-                bloglist[index].description,
-                style: GoogleFonts.inter().copyWith(
-                  fontSize: 11.94,
-                  color: Colors.black,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  bloglist[index].description,
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                    fontSize: 11.94,
+                    color: Colors.black,
+                  ),
                 ),
               ),
               Padding(
