@@ -89,7 +89,9 @@ class FilmFestival extends StatelessWidget {
                                     Text(
                                       'Berlin International Film \nFestival Awards dsadsad',
                                       style: TextStyle(
-                                        fontSize: 19.13,
+                                        fontSize:
+                                            MediaQuery.of(context).size.height *
+                                                0.02,
                                       ),
                                     ),
                                     ElevatedButton.icon(

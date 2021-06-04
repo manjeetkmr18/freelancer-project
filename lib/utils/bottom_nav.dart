@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freelancer_project/screens/details/movie_details.dart';
 import 'package:freelancer_project/screens/film_festival/film_festival.dart';
 import 'package:freelancer_project/screens/home/home_screen.dart';
 import 'package:freelancer_project/screens/tvshows/winning_tvshows_screen.dart';
@@ -20,7 +21,7 @@ class _BottomNavHomeState extends State<BottomNavHome> {
     HomeScreen(),
     WinningTvShows(),
     FilmFestival(),
-    HomeScreen()
+    MovieDetails()
   ];
 
   void _onItemTapped(int index) {
