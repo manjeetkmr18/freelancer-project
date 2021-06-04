@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freelancer_project/screens/account/account_screen.dart';
 import 'package:freelancer_project/screens/details/movie_details.dart';
 import 'package:freelancer_project/screens/film_festival/film_festival.dart';
 import 'package:freelancer_project/screens/home/home_screen.dart';
@@ -18,7 +19,7 @@ class _BottomNavHomeState extends State<BottomNavHome> {
 
   List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
-    HomeScreen(),
+    AccountScreen(),
     WinningTvShows(),
     FilmFestival(),
     MovieDetails()
@@ -36,7 +37,7 @@ class _BottomNavHomeState extends State<BottomNavHome> {
   Color _getItemColor(int index) =>
       _selectedIndex == index ? _selectedItemColor : _unselectedItemColor;
 
-  Widget _buildIcon(IconData iconData, String text, int index) => Container(
+  Widget _buildIcon(Widget icon, String text, int index) => Container(
         width: double.infinity,
         height: kBottomNavigationBarHeight,
         child: Material(
@@ -45,7 +46,7 @@ class _BottomNavHomeState extends State<BottomNavHome> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Icon(iconData),
+                icon,
                 Text(text,
                     style:
                         TextStyle(fontSize: 12, color: _getItemColor(index))),
@@ -67,23 +68,25 @@ class _BottomNavHomeState extends State<BottomNavHome> {
         selectedFontSize: 0,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: _buildIcon(Icons.remove_red_eye_outlined, 'Discover', 0),
+            icon:
+                _buildIcon(Icon(Icons.remove_red_eye_outlined), 'Discover', 0),
             label: 'Discover',
           ),
           BottomNavigationBarItem(
-            icon: _buildIcon(Icons.star_border, 'Awards', 1),
+            icon: _buildIcon(Icon(Icons.star_border), 'Awards', 1),
             label: 'Awards',
           ),
           BottomNavigationBarItem(
-            icon: _buildIcon(Icons.search, 'Search', 2),
+            icon: _buildIcon(Icon(Icons.search), 'Search', 2),
             label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: _buildIcon(Icons.menu_book_rounded, 'Blog', 3),
+            icon: _buildIcon(Icon(Icons.menu_book_rounded), 'Blog', 3),
             label: 'Blog',
           ),
           BottomNavigationBarItem(
-            icon: _buildIcon(Icons.account_circle_sharp, 'Account', 4),
+            icon: _buildIcon(
+                Image.asset('assets/icons/account.png'), 'Account', 4),
             label: 'Account',
           ),
         ],
