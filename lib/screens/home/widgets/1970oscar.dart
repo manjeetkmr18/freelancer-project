@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freelancer_project/screens/home/widgets/title_widget.dart';
+import 'package:freelancer_project/screens/userdetails/userdetails_screen.dart';
 import 'package:freelancer_project/widgets/cardbox.dart';
 
 class OscarMovies extends StatelessWidget {
@@ -9,6 +10,13 @@ class OscarMovies extends StatelessWidget {
       children: [
         TitleWidget(
           titletext: '1970 Oscar Award-Winning \nMovies',
+          pressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => UserDetailsScreen(),
+                ));
+          },
         ),
         Container(
           margin: EdgeInsets.symmetric(vertical: 10.0),

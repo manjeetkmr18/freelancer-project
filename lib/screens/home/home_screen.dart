@@ -10,7 +10,12 @@ import 'widgets/blog_section.dart';
 import 'widgets/oscars1970.dart';
 import 'widgets/video_section.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -41,6 +46,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 TitleWidget(
                   titletext: '1970 Oscar Award-Winning \nMovies',
+                  pressed: () {},
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
@@ -60,8 +66,8 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 TitleWidget(
-                  titletext: '1970 Oscar Award-Winning \nMovies',
-                ),
+                    titletext: '1970 Oscar Award-Winning \nMovies',
+                    pressed: () {}),
                 Padding(
                   padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
                   child: Column(
@@ -83,6 +89,7 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(bottom: 8.0),
                   child: TitleWidget(
                     titletext: 'Recent Blog Posts',
+                    pressed: () {},
                   ),
                 ),
                 BlogSection(),

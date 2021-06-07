@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freelancer_project/screens/home/widgets/title_widget.dart';
 import 'package:freelancer_project/widgets/cardbox.dart';
+import 'package:freelancer_project/widgets/custom_modelsheet.dart';
 
 class Canness1950 extends StatelessWidget {
   @override
@@ -12,6 +13,18 @@ class Canness1950 extends StatelessWidget {
           padding: EdgeInsets.only(top: 20, bottom: 10),
           child: TitleWidget(
             titletext: '1950 Cannes Film Festival\nAwards-Winning Movies',
+            pressed: () {
+              return showModalBottomSheet(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                  isScrollControlled: true,
+                  backgroundColor: Colors.white,
+                  context: context,
+                  builder: (context) {
+                    return CustomModelSheet();
+                  });
+            },
           ),
         ),
         Container(

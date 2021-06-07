@@ -9,6 +9,7 @@ class BestDirector extends StatelessWidget {
       children: [
         TitleWidget(
           titletext: 'Best Director in 15th Emmy \nAwards',
+          pressed: () {},
         ),
         Container(
           margin: EdgeInsets.symmetric(vertical: 10.0),

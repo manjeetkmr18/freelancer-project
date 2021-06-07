@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:freelancer_project/widgets/seeall_button.dart';
 
 class TitleWidget extends StatelessWidget {
   final String titletext;
-  const TitleWidget({this.titletext});
+  final Function pressed;
+  const TitleWidget({this.titletext, this.pressed});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,25 @@ class TitleWidget extends StatelessWidget {
           ),
           textAlign: TextAlign.start,
         ),
-        SeeALlButton()
+        ElevatedButton.icon(
+          style: ElevatedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+                side: BorderSide(width: 1, style: BorderStyle.solid),
+                borderRadius: BorderRadius.circular(50)),
+            padding: EdgeInsets.symmetric(vertical: 1, horizontal: 10),
+            primary: Colors.black,
+          ),
+          onPressed: pressed,
+          icon: Icon(
+            Icons.visibility,
+            color: Colors.white,
+            size: 13.5,
+          ),
+          label: Text(
+            'SEE ALL',
+            style: TextStyle(fontSize: 9),
+          ),
+        ),
       ],
     );
   }

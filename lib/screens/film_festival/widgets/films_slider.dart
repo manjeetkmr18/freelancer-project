@@ -12,6 +12,7 @@ class CommonSlider extends StatelessWidget {
       children: [
         TitleWidget(
           titletext: title,
+          pressed: () {},
         ),
         Container(
           margin: EdgeInsets.symmetric(vertical: 10.0),

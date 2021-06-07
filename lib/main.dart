@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:freelancer_project/screens/authentication/signin_screen.dart';
+
+import 'screens/authentication/signin_screen.dart';
 
 void main() {
   runApp(MyApp());

@@ -9,6 +9,7 @@ class Oscar1970 extends StatelessWidget {
       children: [
         TitleWidget(
           titletext: '1970 Oscar Award-Winning \nMovies',
+          pressed: () {},
         ),
         Container(
           margin: EdgeInsets.symmetric(vertical: 10.0),

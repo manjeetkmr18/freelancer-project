@@ -672,14 +672,7 @@ class _ItemsList extends StatelessWidget {
                       height: size.height * 0.2,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.black
-                          // image: DecorationImage(
-
-                          //   image:AssetImage("assets/imagess/michelle.jpg",),
-                          //   fit: BoxFit.cover
-
-                          // )
-                          ),
+                          color: Colors.black),
                     ),
                     SizedBox(
                       height: 4,

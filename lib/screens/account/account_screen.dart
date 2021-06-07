@@ -29,6 +29,7 @@ class _Body extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class _ItemsList extends StatelessWidget {
   List<AccountsModel> listData = [
     AccountsModel(

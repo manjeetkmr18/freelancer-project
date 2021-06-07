@@ -9,6 +9,7 @@ class Bafta1950 extends StatelessWidget {
       children: [
         TitleWidget(
           titletext: '1950 BAFTA Award-Winning\nMovies',
+          pressed: () {},
         ),
         Container(
           margin: EdgeInsets.symmetric(vertical: 10.0),
