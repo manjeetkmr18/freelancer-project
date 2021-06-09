@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'bottombtn.dart';
+import 'package:freelancer_project/screens/useronboard/widgets/bottombtn.dart';
 import 'user_onboard2.dart';
 
 class UserOnboard extends StatelessWidget {
@@ -61,45 +60,22 @@ class UserOnboard extends StatelessWidget {
             top: 8.0,
             bottom: 8.0,
           ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(50),
-                child: Image.asset('assets/images/profile.png'),
-              ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(50),
-                child: Image.asset('assets/images/profile.png'),
-              ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(50),
-                child: Image.asset('assets/images/profile.png'),
-              ),
-            ],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(
-            top: 8.0,
-            bottom: 8.0,
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(50),
-                child: Image.asset('assets/images/profile.png'),
-              ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(50),
-                child: Image.asset('assets/images/profile.png'),
-              ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(50),
-                child: Image.asset('assets/images/profile.png'),
-              ),
-            ],
+          child: Container(
+            padding: EdgeInsets.only(top: 10),
+            child: GridView.builder(
+                itemCount: 6,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  crossAxisSpacing: 0,
+                  mainAxisSpacing: 1,
+                ),
+                shrinkWrap: true,
+                itemBuilder: (BuildContext context, int index) {
+                  return ClipRRect(
+                    borderRadius: BorderRadius.circular(50),
+                    child: Image.asset('assets/images/profile.png'),
+                  );
+                }),
           ),
         ),
         Center(
@@ -136,11 +112,12 @@ class UserOnboard extends StatelessWidget {
                 child: BottomButton(
                   btnText: 'Continue',
                   press: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => UserOnboard2(),
-                        ));
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context) => UserOnboard2(),
+                    //   ),
+                    // );
                   },
                   last: true,
                 ),
