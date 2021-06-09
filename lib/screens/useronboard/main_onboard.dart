@@ -17,7 +17,7 @@ class _MainOnboardState extends State<MainOnboard> {
     UserOnboard2(),
   ];
   double currentPage = 0.0;
-  final _pageViewController = new PageController();
+  final _pageViewController = PageController();
   List<Widget> indicator() => List<Widget>.generate(
         slides.length,
         (index) => AnimatedContainer(
@@ -51,33 +51,26 @@ class _MainOnboardState extends State<MainOnboard> {
             padding: EdgeInsets.all(10.0),
             child: Stack(
               children: [
-                Align(
-                  alignment: Alignment.topCenter,
-                  child: Image.asset('assets/icons/logo.png'),
-                ),
-                Positioned(
-                  top: MediaQuery.of(context).size.height * 0.06,
-                  child: Container(
-                    alignment: Alignment.center,
-                    child: PageView.builder(
-                      controller: _pageViewController,
-                      itemCount: slides.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        _pageViewController.addListener(() {
-                          setState(() {
-                            currentPage = _pageViewController.page;
-                          });
+                Container(
+                  alignment: Alignment.center,
+                  child: PageView.builder(
+                    controller: _pageViewController,
+                    itemCount: slides.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      _pageViewController.addListener(() {
+                        setState(() {
+                          currentPage = _pageViewController.page;
                         });
-                        return slides[index];
-                      },
-                    ),
+                      });
+                      return slides[index];
+                    },
                   ),
                 ),
                 Align(
                     alignment: Alignment.bottomCenter,
                     child: Container(
-                      margin: EdgeInsets.only(top: 70.0),
-                      padding: EdgeInsets.symmetric(vertical: 40.0),
+                      // margin: EdgeInsets.only(top: 70.0),
+                      padding: EdgeInsets.symmetric(vertical: 20.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: indicator(),

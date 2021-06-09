@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:freelancer_project/screens/account/account_screen.dart';
 import 'package:freelancer_project/screens/details/movie_details.dart';
 import 'package:freelancer_project/screens/film_festival/film_festival.dart';
+import 'package:freelancer_project/screens/filters/filters_screen.dart';
 import 'package:freelancer_project/screens/home/home_screen.dart';
-import 'package:freelancer_project/screens/tvshows/winning_tvshows_screen.dart';
 
 class BottomNavHome extends StatefulWidget {
   @override
@@ -20,7 +20,7 @@ class _BottomNavHomeState extends State<BottomNavHome> {
   List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     AccountScreen(),
-    WinningTvShows(),
+    FiltersScreen(),
     FilmFestival(),
     MovieDetails()
   ];

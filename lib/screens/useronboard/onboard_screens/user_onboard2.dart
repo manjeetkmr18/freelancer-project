@@ -20,6 +20,9 @@ class UserOnboard2 extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Align(
+              child: Image.asset('assets/icons/logo.png'),
+            ),
             Text(
               'Choose Favourite  Movies & TV-\nShows',
               textAlign: TextAlign.start,
@@ -45,7 +48,7 @@ class UserOnboard2 extends StatelessWidget {
                     crossAxisCount: 3,
                     crossAxisSpacing: 0,
                     mainAxisSpacing: 1,
-                    mainAxisExtent: size.height * 0.23,
+                    mainAxisExtent: size.height * 0.22,
                   ),
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, int index) {

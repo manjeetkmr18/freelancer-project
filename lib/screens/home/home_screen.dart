@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freelancer_project/screens/home/widgets/title_widget.dart';
+import 'package:freelancer_project/widgets/custom_modelsheet.dart';
 import 'package:freelancer_project/widgets/loadmore_button.dart';
 
 import 'widgets/1950bafta.dart';
@@ -16,6 +17,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    _modalBottomSheetMenu();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -103,5 +110,20 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     );
+  }
+
+  void _modalBottomSheetMenu() {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      await showModalBottomSheet(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30.0),
+          ),
+          isScrollControlled: true,
+          backgroundColor: Colors.white,
+          context: context,
+          builder: (context) {
+            return CustomModelSheet();
+          });
+    });
   }
 }

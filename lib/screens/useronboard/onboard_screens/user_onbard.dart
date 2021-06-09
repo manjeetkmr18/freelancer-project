@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:freelancer_project/screens/useronboard/widgets/bottombtn.dart';
-import 'user_onboard2.dart';
 
 class UserOnboard extends StatelessWidget {
   @override
@@ -8,6 +7,9 @@ class UserOnboard extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Align(
+          child: Image.asset('assets/icons/logo.png'),
+        ),
         Container(
           alignment: Alignment.center,
           padding: EdgeInsets.all(10),

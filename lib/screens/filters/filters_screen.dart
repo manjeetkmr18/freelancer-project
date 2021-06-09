@@ -315,9 +315,9 @@ class __ItemsListState extends State<_ItemsList> {
     return SliverToBoxAdapter(
         child: Container(
             decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-            ),
+                // color: Colors.white,
+                // borderRadius: BorderRadius.circular(10),
+                ),
             child: ExpansionTile(
               childrenPadding: const EdgeInsets.all(0),
               expandedCrossAxisAlignment: CrossAxisAlignment.start,
