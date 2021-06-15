@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:freelancer_project/screens/filters/filters_screen.dart';
+import 'package:freelancer_project/screens/filters/widgets/filters_widget.dart';
 
 import 'screens/authentication/signin_screen.dart';
 
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.black,
         fontFamily: 'Inter',
       ),
-      home: SignInSceen(),
+      home: FiltersScreen(),
     );
   }
 }
