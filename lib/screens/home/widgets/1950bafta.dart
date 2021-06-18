@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freelancer_project/screens/home/widgets/title_widget.dart';
+import 'package:freelancer_project/screens/show_details/show_details.dart';
 import 'package:freelancer_project/widgets/cardbox.dart';
 
 class Bafta1950 extends StatelessWidget {
@@ -9,7 +10,14 @@ class Bafta1950 extends StatelessWidget {
       children: [
         TitleWidget(
           titletext: '1950 BAFTA Award-Winning\nMovies',
-          pressed: () {},
+          pressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ShowDetails(),
+              ),
+            );
+          },
         ),
         Container(
           margin: EdgeInsets.symmetric(vertical: 10.0),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'onboard_screens/fav_people.dart';
+import '../foryou.dart';
 import 'onboard_screens/user_onbard.dart';
 import 'onboard_screens/user_onboard2.dart';
 
@@ -12,8 +14,7 @@ class _MainOnboardState extends State<MainOnboard> {
   List slides = [
     UserOnboard(),
     UserOnboard2(),
-    UserOnboard2(),
-    UserOnboard2(),
+    FavouritePeople(),
     UserOnboard2(),
   ];
   double currentPage = 0.0;

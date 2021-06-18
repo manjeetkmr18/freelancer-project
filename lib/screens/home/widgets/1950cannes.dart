@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freelancer_project/screens/home/widgets/title_widget.dart';
+import 'package:freelancer_project/screens/tvshows/winning_tvshows_screen.dart';
 import 'package:freelancer_project/widgets/cardbox.dart';
 
 class Canness1950 extends StatelessWidget {
@@ -13,16 +14,12 @@ class Canness1950 extends StatelessWidget {
           child: TitleWidget(
             titletext: '1950 Cannes Film Festival\nAwards-Winning Movies',
             pressed: () {
-              // return showModalBottomSheet(
-              //     shape: RoundedRectangleBorder(
-              //       borderRadius: BorderRadius.circular(30.0),
-              //     ),
-              //     isScrollControlled: true,
-              //     backgroundColor: Colors.white,
-              //     context: context,
-              //     builder: (context) {
-              //       return CustomModelSheet();
-              //     });
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => WinningTvShows(),
+                ),
+              );
             },
           ),
         ),

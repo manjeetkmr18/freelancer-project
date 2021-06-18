@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:freelancer_project/screens/filters/filters_screen.dart';
-import 'package:freelancer_project/screens/filters/widgets/filters_widget.dart';
+import 'package:freelancer_project/screens/authentication/signin_screen.dart';
 
-import 'screens/authentication/signin_screen.dart';
+import 'screens/foryou.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,7 +17,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.black,
         fontFamily: 'Inter',
       ),
-      home: FiltersScreen(),
+      home: SignInSceen(),
     );
   }
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:freelancer_project/screens/filters/widgets/button_text.dart';
 import 'package:freelancer_project/screens/details/widgets/icon_button.dart';
 
 import 'widgets/country_container.dart';
@@ -38,12 +37,6 @@ class _ItemsList extends StatefulWidget {
 }
 
 class __ItemsListState extends State<_ItemsList> {
-  int _groupValue = -1;
-  int _groupValue1 = -1;
-  int _groupValue2 = -1;
-  RangeValues _currentRangeValues =
-      RangeValues(1927, DateTime.now().year.toDouble());
-
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -55,7 +48,7 @@ class __ItemsListState extends State<_ItemsList> {
             context: context, title: "Sort By", icon: Icons.arrow_drop_down),
         _spacer(context, size.height * 0.02),
         //2nd
-        _filters_Section(),
+        _filterssection(),
         _spacer(context, size.height * 0.02),
         //3rd widget
         _countryWidget(context),
@@ -69,18 +62,6 @@ class __ItemsListState extends State<_ItemsList> {
     return SliverToBoxAdapter(
       child: SizedBox(
         height: height,
-      ),
-    );
-  }
-
-  _title(String title) {
-    final size = MediaQuery.of(context).size;
-    return SliverToBoxAdapter(
-      child: Container(
-        alignment: Alignment.centerLeft,
-        width: size.width,
-        child: Text(title,
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
       ),
     );
   }
@@ -127,7 +108,7 @@ class __ItemsListState extends State<_ItemsList> {
     );
   }
 
-  _filters_Section() {
+  _filterssection() {
     return SliverToBoxAdapter(
       child: Container(
         padding: EdgeInsets.all(8),
@@ -141,13 +122,13 @@ class __ItemsListState extends State<_ItemsList> {
   }
 
   _countryWidget(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return SliverToBoxAdapter(
       child: Container(
         decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: Colors.black)),
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10),
+          // border: Border.all(color: Colors.black),
+        ),
         child: ExpansionTile(
           childrenPadding: const EdgeInsets.all(0),
           expandedCrossAxisAlignment: CrossAxisAlignment.start,

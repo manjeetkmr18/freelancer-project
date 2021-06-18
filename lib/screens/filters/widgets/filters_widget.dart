@@ -17,7 +17,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
     return ExpansionTile(
       backgroundColor: Colors.white,
       // tilePadding: EdgeInsets.only(left: 10),
-      initiallyExpanded: true,
+      initiallyExpanded: false,
       title: Text(
         'Filters',
         style: new TextStyle(

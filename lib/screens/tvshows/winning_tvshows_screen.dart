@@ -19,24 +19,25 @@ class _Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: const EdgeInsets.only(
-          top: 40,
+      margin: const EdgeInsets.only(
+        top: 200,
+      ),
+      padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
+      decoration: BoxDecoration(
+        color: Colors.grey[200],
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(60),
+          topRight: Radius.circular(60),
         ),
-        padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
-        decoration: BoxDecoration(
-          color: Colors.grey[200],
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(60),
-            topRight: Radius.circular(60),
-          ),
-        ),
-        child: Stack(
-          children: [
-            _ItemsList(),
-            _dash(),
-            _topButtons(),
-          ],
-        ));
+      ),
+      child: Stack(
+        children: [
+          _ItemsList(),
+          _dash(),
+          _topButtons(),
+        ],
+      ),
+    );
   }
 
   _topButtons() {
@@ -123,7 +124,11 @@ class _Background extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black,
+      child: Image.asset(
+        'assets/images/blurimg.png',
+        fit: BoxFit.cover,
+        width: double.infinity,
+      ),
     );
   }
 }
